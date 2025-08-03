@@ -1,0 +1,182 @@
+:root {
+  --main-color: #2563eb;         /* primary blue */
+  --second-color: #1abc9c;       /* secondary teal */
+  --red-color: #eb3b5a;          /* red for errors/alerts */
+  --yellow-color: #f1c40f;       /* yellow */
+  --yellow-light-color: #ffeaa7; /* light yellow */
+  --background-color: #FFF;   /* light gray background */
+  --text-color: #222222;         /* dark text */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --border-radius: 6px;
+  --transition-speed: 0.3s;
+}
+
+/* Tailwind base imports (keep if you use Tailwind) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Text uppercase everywhere */
+  body, input, button, select {
+    text-transform: uppercase;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+
+  /* Buttons and backgrounds using your palette */
+  .btn-main {
+    background-color: var(--main-color) !important;
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  .btn-main:hover {
+    background-color: #1d4ed8; /* darker blue */
+  }
+
+  .bg-main {
+    background-color: var(--main-color) !important;
+    color: #fff;
+  }
+
+  .border-main {
+    border-color: var(--main-color);
+  }
+
+  .text-main {
+    color: var(--main-color);
+  }
+
+  .btn-second {
+    background-color: var(--second-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  .btn-second:hover {
+    background-color: #159e8a;
+  }
+  .bg-second {
+    background-color: var(--second-color);
+    color: #fff;
+  }
+  .text-second {
+    color: var(--second-color);
+  }
+
+  .btn-red {
+    background-color: var(--red-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  .btn-red:hover {
+    background-color: #c53049;
+  }
+  .bg-red {
+    background-color: var(--red-color);
+    color: #fff;
+  }
+  .text-red {
+    color: var(--red-color);
+  }
+
+  .btn-yellow {
+    background-color: var(--yellow-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+  .bg-yellow {
+    background-color: var(--yellow-color);
+    color: #fff;
+  }
+  .text-yellow {
+    color: var(--yellow-color);
+  }
+
+  .bg-yellow-light {
+    background-color: var(--yellow-light-color) !important;
+    color: #222;
+  }
+  .text-yellow-light {
+    color: var(--yellow-light-color);
+  }
+
+  /* White text utility */
+  .text-white {
+    color: #fff !important;
+  }
+
+  /* Spacing utilities */
+  .m-0 { margin: 0 !important; }
+  .mt-1 { margin-top: 0.25rem !important; }
+  .mt-2 { margin-top: 0.5rem !important; }
+  .mt-3 { margin-top: 1rem !important; }
+  .mb-1 { margin-bottom: 0.25rem !important; }
+  .mb-2 { margin-bottom: 0.5rem !important; }
+  .mb-3 { margin-bottom: 1rem !important; }
+  .p-1 { padding: 0.25rem !important; }
+  .p-2 { padding: 0.5rem !important; }
+  .p-3 { padding: 1rem !important; }
+
+  /* Rounded corners */
+  .rounded {
+    border-radius: var(--border-radius);
+  }
+
+  /* Text alignment */
+  .text-center {
+    text-align: center !important;
+  }
+
+  /* Shadow */
+  .shadow {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Utility for uppercase text */
+  .uppercase {
+    text-transform: uppercase !important;
+  }
+}
+
+/* Hide spinner on number inputs */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Print media */
+@media print {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+}
