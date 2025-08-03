@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const port = "3022"
-export const companyName: any = "mern-template"
+const port = "3033"
+export const companyName: any = "nexorabusiness"
 
-// export const hostName = `https://api.onmdm.com/`
+// export const hostName = `https://api.nexorabusiness.mr/`
 export const hostName = `http://localhost:${port}/`
 
 const BASE_URL = `${hostName}api/`
